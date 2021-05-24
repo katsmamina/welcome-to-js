@@ -3,3 +3,4 @@ console.log(confirm1 === true); // true
 
 let confirm2 = confirm('2. do not agree to this one');
 console.log(confirm2 === false); // true
+// review – why in 2 – true ?

@@ -32,16 +32,34 @@
 console.log('--- begin program ---');
 
 // --- gather user input ---
-let text = prompt(_);
-console.log('text:', text);
+let firstWord = prompt('enter the first word');
+console.log('text:', firstWord);
 
-let query = prompt(_);
-console.log('query:', query);
-
+let secondWord = prompt('enter the second word');
+console.log('query:', secondWord);
 // --- declare initial output ---
-let output = _;
+let output;
 
 // --- create final output ---
+if (firstWord === '' && secondWord === '') {
+  output = '"" includes ""' 
+}
+
+else if (secondWord === '' && firstWord != '') {
+  output = firstWord + ' does include ""'
+}
+
+else if (firstWord === '' && secondWord != '') {
+  output = '"" does not include ' + secondWord
+}
+
+else if (firstWord.includes(secondWord)) {
+  output = firstWord + ' does include ' + secondWord
+}
+
+else {
+  output = firstWord + ' does not include ' + secondWord
+}
 
 // --- alert the result ---
 console.log('output:', output);

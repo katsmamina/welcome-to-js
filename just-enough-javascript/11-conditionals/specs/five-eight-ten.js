@@ -35,11 +35,36 @@
 console.log('--- begin program ---');
 
 // --- gather user input ---
-let input = prompt(_);
+let input = prompt('type your word');
 console.log('input:', input);
 
 // --- declare initial output ---
-let output = _;
+let output;
+
+if (input === null) {
+  output = ":(";
+} 
+else if (input === '') {
+  output = 'not even close'
+}
+else if (input.length > 0 && input.length < 5) {
+ output = 'better'
+}
+else if (input.length >= 5 && input.length < 8) {
+output = 'almost there'
+}
+
+else if (input.length >= 8 && input.length < 10) {
+output = 'so close'
+}
+
+else if (input.length === 10) {
+output = 'perfect!'
+}
+
+else {
+  output = 'too long'
+}
 
 // --- create final output ---
 

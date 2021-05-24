@@ -17,15 +17,45 @@
 
 console.log('--- begin program ---');
 
+let input = '';
+while (input.length !==10 || input !== null) {
+  input = prompt('enter a word of 10 letters'); { 
+    if (input.length < 10) {
+    alert('your word is ' + (10-input.length) + ' characters too short');
+    }
+    else if(input.length > 10) {
+    alert('your word is ' + (input.length - 10) + ' characters too long');
+    }
+    else {
+    alert(input)
+    }
+  }
+}
+
+/* let message = 'your word is '
+let word = true;
 // --- declare initial output ---
-let output = _;
 
 // --- create final output ---
-while (_) {}
+while (word) { 
+  if (input === null); {
+  alert('you should enter a word');
+} else if (input.length !==0 && input.length < 10) {
+  message = message + (10 - input.length) + 'characters too short';
+  alert(message);
+} else if (input.length === 10) {
+  word = false;
+  alert(input);
+} else {
+  output = output + (input.length - 10) + 'characters too long';
+  alert(message);
+  }
+}
+
+alert(input)
 
 // --- alert the result ---
 console.log('output:', output);
-alert(output);
 
 console.log('--- end program ---');
 
